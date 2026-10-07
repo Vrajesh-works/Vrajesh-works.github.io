@@ -51,13 +51,6 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:6
 .term pre{font:400 13px/1.9 "JetBrains Mono",monospace;padding:20px 22px;color:var(--dim);white-space:pre-wrap}
 .term .k{color:var(--amber)}.term .s{color:var(--green)}
 
-/* stats */
-.stats{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:14px;background:var(--panel);overflow:hidden;margin-bottom:24px}
-.stat{padding:24px 22px;border-right:1px solid var(--line)}
-.stat:last-child{border:none}
-.stat b{display:block;font-size:30px;font-weight:800;letter-spacing:-1px}
-.stat b em{font-style:normal;color:var(--amber)}
-.stat span{font-size:13px;color:var(--dim)}
 
 /* sections */
 section{padding:72px 0}
@@ -135,9 +128,6 @@ footer p{color:var(--faint);font-size:13px}
 
 @media(max-width:900px){
   .hero{grid-template-columns:1fr;padding:64px 0 48px}
-  .stats{grid-template-columns:1fr 1fr}
-  .stat:nth-child(2){border-right:none}
-  .stat:nth-child(-n+2){border-bottom:1px solid var(--line)}
   .skills,.steps{grid-template-columns:1fr 1fr}
   .about-grid{grid-template-columns:1fr}
 }
