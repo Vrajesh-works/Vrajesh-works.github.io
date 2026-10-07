@@ -1,6 +1,26 @@
 (function(){
   var reduce=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+  // feather icon on section labels
+  document.querySelectorAll(".sec-head").forEach(function(h){
+    h.insertAdjacentHTML("afterbegin",'<svg aria-hidden="true"><use href="#feather"/></svg>');
+  });
+
+  // drifting peacock feathers
+  var fx=document.getElementById("fx");
+  if(fx&&!reduce){
+    for(var n=0;n<8;n++){
+      var s=document.createElementNS("http://www.w3.org/2000/svg","svg");
+      var u=document.createElementNS("http://www.w3.org/2000/svg","use");
+      u.setAttribute("href","#feather");s.appendChild(u);
+      var w=18+Math.random()*22;
+      s.style.cssText="left:"+(Math.random()*96)+"%;width:"+w+"px;height:"+(w*2)+"px;"+
+        "animation-duration:"+(22+Math.random()*20)+"s;animation-delay:-"+(Math.random()*30)+"s;"+
+        "--dx:"+((Math.random()-.5)*160)+"px;--r0:"+(-30+Math.random()*60)+"deg;--r1:"+(-30+Math.random()*60)+"deg";
+      fx.appendChild(s);
+    }
+  }
+
   // typed role line
   var roles=["Software Engineer","AI application builder","Fintech and quant tinkerer","Real-time systems developer"];
   var el=document.getElementById("typed"),ri=0,ci=0,del=false;

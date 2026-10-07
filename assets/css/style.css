@@ -126,7 +126,40 @@ footer p{color:var(--faint);font-size:13px}
 .reveal.in{opacity:1;transform:none}
 .card.reveal.in{transition:border-color .25s,transform .25s,box-shadow .25s}
 
+/* krishna theme */
+:root{--blue:#3b6cff;--teal:#12c2b0}
+.hero{position:relative}
+.jai{font:600 15px "Noto Sans Devanagari",Inter,sans-serif;color:var(--amber);letter-spacing:1px;margin-bottom:14px;text-shadow:0 0 18px rgba(255,160,47,.35)}
+footer .jai{margin-bottom:10px}
+.chakra{position:absolute;left:-150px;top:-10px;width:440px;height:440px;color:var(--amber);opacity:.07;pointer-events:none;animation:spin 70s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.hero > div,.hero-side{position:relative;z-index:1}
+.hero-art{position:absolute;right:6px;top:-112px;width:220px;height:200px;pointer-events:none;z-index:0}
+.f{position:absolute;bottom:0;left:50%;width:84px;height:170px;transform-origin:50% 100%;--r:0deg;transform:translateX(-50%) rotate(var(--r));animation:sway 6s ease-in-out infinite;filter:drop-shadow(0 6px 14px rgba(18,194,176,.25))}
+.f:nth-child(2){animation-delay:-2s;animation-duration:7s}
+.f:nth-child(3){animation-delay:-4s}
+@keyframes sway{0%,100%{transform:translateX(-50%) rotate(calc(var(--r) - 3deg))}50%{transform:translateX(-50%) rotate(calc(var(--r) + 3deg))}}
+.term{position:relative;z-index:1}
+.flute{position:relative;display:flex;align-items:center;gap:18px;margin:8px 0 0}
+.flute .line{flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(255,160,47,.35))}
+.flute .line:last-child{background:linear-gradient(270deg,transparent,rgba(255,160,47,.35))}
+.flute-wrap{position:relative;width:240px}
+.flute-svg{display:block;width:240px;height:24px;transform:rotate(-4deg);filter:drop-shadow(0 0 10px rgba(255,160,47,.35))}
+.note{position:absolute;right:6px;top:0;color:var(--amber);font-size:20px;opacity:0;animation:note 4.5s ease-in infinite}
+.n2{animation-delay:1.5s;right:22px}
+.n3{animation-delay:3s;right:0}
+@keyframes note{0%{opacity:0;transform:translate(0,0) rotate(0)}15%{opacity:.9}100%{opacity:0;transform:translate(26px,-60px) rotate(18deg)}}
+.sec-head svg{width:11px;height:22px;vertical-align:-5px;margin-right:10px;transform-origin:50% 100%;animation:sway2 5s ease-in-out infinite}
+@keyframes sway2{0%,100%{transform:rotate(-8deg)}50%{transform:rotate(8deg)}}
+.fx{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
+.fx svg{position:absolute;top:-60px;opacity:.22;animation:fall linear infinite}
+@keyframes fall{0%{transform:translate3d(0,0,0) rotate(var(--r0))}50%{transform:translate3d(var(--dx),55vh,0) rotate(var(--r1))}100%{transform:translate3d(0,115vh,0) rotate(var(--r0))}}
+.card:hover .tag{text-shadow:0 0 12px rgba(255,160,47,.5)}
+.btn-amber{background:linear-gradient(135deg,#ffc15e,var(--amber))}
+
 @media(max-width:900px){
+  .hero-art{right:auto;left:50%;transform:translateX(-50%);top:-96px}
+  .chakra{width:300px;height:300px;left:-120px}
   .hero{grid-template-columns:1fr;padding:64px 0 48px}
   .skills,.steps{grid-template-columns:1fr 1fr}
   .about-grid{grid-template-columns:1fr}
@@ -145,4 +178,5 @@ footer p{color:var(--faint);font-size:13px}
   html{scroll-behavior:auto}
   *,*::before,*::after{animation:none!important;transition:none!important}
   .reveal{opacity:1;transform:none}
+  .fx{display:none}
 }

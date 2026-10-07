@@ -14,11 +14,28 @@
 <link rel="canonical" href="https://vrajesh-works.github.io/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&family=Noto+Sans+Devanagari:wght@600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 <div class="progress" id="progress"></div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="fg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#12c2b0"/><stop offset=".6" stop-color="#0e8f6a"/><stop offset="1" stop-color="#1b4fd8"/></linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffd27a"/><stop offset="1" stop-color="#e08a12"/></linearGradient>
+    <path id="tooth" d="M100 6 L109 34 L91 34Z"/>
+    <symbol id="feather" viewBox="0 0 100 200">
+      <path d="M50 192 C-8 128 -6 44 50 6 C106 44 108 128 50 192Z" fill="url(#fg)" opacity=".92"/>
+      <path d="M50 150 L12 128 M50 132 L8 104 M50 114 L7 80 M50 96 L10 58 M50 150 L88 128 M50 132 L92 104 M50 114 L93 80 M50 96 L90 58" stroke="#ffd27a" stroke-opacity=".35" stroke-width="1" fill="none"/>
+      <path d="M50 200 C49 150 51 90 50 14" stroke="url(#gold)" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+      <ellipse cx="50" cy="66" rx="22" ry="30" fill="url(#gold)"/>
+      <ellipse cx="50" cy="66" rx="16" ry="23" fill="#1b4fd8"/>
+      <ellipse cx="50" cy="66" rx="10" ry="15" fill="#12c2b0"/>
+      <ellipse cx="50" cy="66" rx="5" ry="8" fill="#0b1b4d"/>
+    </symbol>
+  </defs>
+</svg>
+<div class="fx" id="fx" aria-hidden="true"></div>
 <nav>
   <div class="wrap">
     <a class="logo" href="#top">vrajesh<span>.</span>works</a>
@@ -35,7 +52,17 @@
 
 <main class="wrap" id="top">
   <header class="hero">
+    <svg class="chakra" viewBox="0 0 200 200" fill="none" stroke="currentColor" aria-hidden="true">
+      <circle cx="100" cy="100" r="62" stroke-width="2"/><circle cx="100" cy="100" r="50" stroke-width="1"/><circle cx="100" cy="100" r="16" stroke-width="2"/>
+      <g stroke-width="1"><path d="M100 36V84M100 116V164M36 100H84M116 100H164M55 55L88 88M112 112L145 145M145 55L112 88M88 112L55 145"/></g>
+      <g fill="currentColor" stroke="none">
+        <use href="#tooth"/><use href="#tooth" transform="rotate(30 100 100)"/><use href="#tooth" transform="rotate(60 100 100)"/><use href="#tooth" transform="rotate(90 100 100)"/>
+        <use href="#tooth" transform="rotate(120 100 100)"/><use href="#tooth" transform="rotate(150 100 100)"/><use href="#tooth" transform="rotate(180 100 100)"/><use href="#tooth" transform="rotate(210 100 100)"/>
+        <use href="#tooth" transform="rotate(240 100 100)"/><use href="#tooth" transform="rotate(270 100 100)"/><use href="#tooth" transform="rotate(300 100 100)"/><use href="#tooth" transform="rotate(330 100 100)"/>
+      </g>
+    </svg>
     <div>
+      <div class="jai" lang="hi">॥ जय श्री कृष्ण ॥</div>
       <div class="status"><span class="dot"></span>Open to software engineering roles</div>
       <h1>Vrajesh Nasit<span class="amber">.</span></h1>
       <div class="role"><span id="typed">Software Engineer</span><span class="caret"></span></div>
@@ -45,6 +72,12 @@
         <a class="btn btn-ghost" href="https://www.linkedin.com/in/vrajesh-nasit/" target="_blank" rel="noopener">LinkedIn</a>
         <a class="btn btn-ghost" href="https://github.com/Vrajesh-works" target="_blank" rel="noopener">GitHub</a>
       </div>
+    </div>
+    <div class="hero-side">
+    <div class="hero-art" aria-hidden="true">
+      <svg class="f" style="--r:-24deg"><use href="#feather"/></svg>
+      <svg class="f" style="--r:0deg;height:200px;width:100px"><use href="#feather"/></svg>
+      <svg class="f" style="--r:24deg"><use href="#feather"/></svg>
     </div>
     <div class="term" aria-hidden="true">
       <div class="term-bar"><i></i><i></i><i></i><span>vrajesh.json</span></div>
@@ -61,7 +94,21 @@
   <span class="k">"status"</span>: <span class="s">"building"</span>
 }</pre>
     </div>
+    </div>
   </header>
+
+  <div class="flute" aria-hidden="true">
+    <span class="line"></span>
+    <div class="flute-wrap">
+      <svg class="flute-svg" viewBox="0 0 240 24">
+        <rect x="4" y="7" width="232" height="10" rx="5" fill="url(#gold)"/>
+        <rect x="26" y="7" width="4" height="10" fill="#7a4a06" opacity=".7"/><rect x="214" y="7" width="4" height="10" fill="#7a4a06" opacity=".7"/>
+        <g fill="#0a0a0b"><circle cx="76" cy="12" r="2.6"/><circle cx="102" cy="12" r="2.6"/><circle cx="128" cy="12" r="2.6"/><circle cx="154" cy="12" r="2.6"/><circle cx="180" cy="12" r="2.6"/></g>
+      </svg>
+      <span class="note n1">&#9834;</span><span class="note n2">&#9835;</span><span class="note n3">&#9833;</span>
+    </div>
+    <span class="line"></span>
+  </div>
 
   <section id="projects">
     <div class="sec-head reveal">01 // SELECTED WORK</div>
@@ -190,6 +237,7 @@
       <a href="https://www.linkedin.com/in/vrajesh-nasit/" target="_blank" rel="noopener">LinkedIn</a>
       <a href="mailto:nasit.v@northeastern.edu">Email</a>
     </div>
+    <p class="jai" lang="hi">॥ जय श्री कृष्ण ॥</p>
     <p>© 2026 Vrajesh Nasit · Built with plain HTML, CSS and a little JavaScript, hosted free on GitHub Pages</p>
   </div>
 </footer>
