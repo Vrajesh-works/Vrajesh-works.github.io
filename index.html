@@ -3,221 +3,172 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Vrajesh Nasit | Software Engineer</title>
-<meta name="description" content="Vrajesh Nasit. Software Engineer building AI-powered applications, fintech tools and real-time systems. Live projects: BindBench, Equity Terminal, SOR Lab.">
-<meta property="og:title" content="Vrajesh Nasit | Software Engineer">
-<meta property="og:description" content="AI-powered applications, fintech tools and real-time systems. Every project is live and clickable.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://vrajesh-works.github.io/">
-<meta name="theme-color" content="#050b10">
-<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
-<link rel="canonical" href="https://vrajesh-works.github.io/">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&family=Noto+Sans+Devanagari:wght@600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css">
+<title>Vrajesh Nasit — Software Engineer</title>
+<meta name="description" content="Vrajesh Nasit. Software Engineer building AI-powered applications and real-time systems.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' rx='3' fill='%23ffa02f'/><text x='8' y='12' font-size='10' text-anchor='middle' fill='%23000' font-family='monospace' font-weight='bold'>V</text></svg>">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0a0a0b;--panel:#121214;--line:#1f1f23;--amber:#ffa02f;--tx:#ececec;--dim:#9a9aa3;--faint:#5c5c66}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--tx);font-family:Inter,system-ui,-apple-system,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+.mono{font-family:"JetBrains Mono",monospace}
+.wrap{max-width:960px;margin:0 auto;padding:0 24px}
+nav{position:sticky;top:0;z-index:10;background:rgba(10,10,11,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-family:"JetBrains Mono",monospace;font-weight:700;font-size:18px;color:var(--tx);text-decoration:none}
+.logo span{color:var(--amber)}
+.nav-links{display:flex;gap:28px;align-items:center}
+.nav-links a{color:var(--dim);text-decoration:none;font-size:14px;font-weight:500;transition:color .2s}
+.nav-links a:hover{color:var(--tx)}
+.btn{display:inline-block;padding:10px 22px;border-radius:8px;font-size:14px;font-weight:600;text-decoration:none;transition:transform .15s,box-shadow .15s}
+.btn-amber{background:var(--amber);color:#000}
+.btn-amber:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(255,160,47,.25)}
+.btn-ghost{border:1px solid var(--line);color:var(--tx)}
+.btn-ghost:hover{border-color:var(--amber);color:var(--amber)}
+.hero{padding:110px 0 80px}
+.kicker{font-family:"JetBrains Mono",monospace;color:var(--amber);font-size:13px;letter-spacing:2px;margin-bottom:18px}
+.hero h1{font-size:clamp(42px,7vw,72px);font-weight:800;letter-spacing:-2px;line-height:1.05;margin-bottom:20px}
+.hero h1 .amber{color:var(--amber)}
+.lede{font-size:19px;color:var(--dim);max-width:620px;margin-bottom:36px}
+.lede strong{color:var(--tx);font-weight:600}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap}
+section{padding:64px 0}
+.sec-head{font-family:"JetBrains Mono",monospace;font-size:12px;letter-spacing:3px;color:var(--amber);margin-bottom:8px}
+.sec-title{font-size:32px;font-weight:700;letter-spacing:-1px;margin-bottom:12px}
+.sec-sub{color:var(--dim);margin-bottom:36px;max-width:640px}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:28px;display:flex;flex-direction:column;transition:border-color .2s,transform .2s}
+.card:hover{border-color:var(--amber);transform:translateY(-3px)}
+.card .tag{font-family:"JetBrains Mono",monospace;font-size:11px;color:var(--amber);letter-spacing:2px;margin-bottom:12px}
+.card h3{font-size:22px;font-weight:700;margin-bottom:10px;letter-spacing:-.5px}
+.card p{color:var(--dim);font-size:15px;flex:1;margin-bottom:18px}
+.stack{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.stack span{font-family:"JetBrains Mono",monospace;font-size:11px;color:var(--dim);border:1px solid var(--line);border-radius:6px;padding:4px 10px}
+.card-links{display:flex;gap:12px}
+.card-links a{font-size:14px;font-weight:600;color:var(--tx);text-decoration:none;border-bottom:2px solid var(--amber);padding-bottom:2px}
+.card-links a:hover{color:var(--amber)}
+.live-dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#3ddc84;margin-right:6px;animation:blink 2s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.about-box{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:28px}
+.about-box h4{font-size:16px;margin-bottom:10px}
+.about-box p,.about-box li{color:var(--dim);font-size:15px}
+.about-box ul{list-style:none}
+.about-box li{padding:6px 0;border-bottom:1px solid var(--line)}
+.about-box li:last-child{border:none}
+.about-box li b{color:var(--tx);font-weight:600}
+footer{border-top:1px solid var(--line);padding:48px 0;text-align:center}
+footer .links{display:flex;gap:24px;justify-content:center;margin-bottom:20px}
+footer a{color:var(--dim);text-decoration:none;font-size:14px;font-weight:500}
+footer a:hover{color:var(--amber)}
+footer p{color:var(--faint);font-size:13px}
+@media(max-width:720px){.cards,.about-grid{grid-template-columns:1fr}.hero{padding:72px 0 56px}.nav-links a:not(:last-child){display:none}}
+</style>
 </head>
 <body>
-<div class="progress" id="progress"></div>
-<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
-  <defs>
-    <linearGradient id="fg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#12c2b0"/><stop offset=".6" stop-color="#0e8f6a"/><stop offset="1" stop-color="#1b4fd8"/></linearGradient>
-    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffd27a"/><stop offset="1" stop-color="#e08a12"/></linearGradient>
-    <symbol id="feather" viewBox="0 0 100 200">
-      <path d="M50 192 C-8 128 -6 44 50 6 C106 44 108 128 50 192Z" fill="url(#fg)" opacity=".92"/>
-      <path d="M50 150 L12 128 M50 132 L8 104 M50 114 L7 80 M50 96 L10 58 M50 150 L88 128 M50 132 L92 104 M50 114 L93 80 M50 96 L90 58" stroke="#ffd27a" stroke-opacity=".35" stroke-width="1" fill="none"/>
-      <path d="M50 200 C49 150 51 90 50 14" stroke="url(#gold)" stroke-width="2.2" fill="none" stroke-linecap="round"/>
-      <ellipse cx="50" cy="66" rx="22" ry="30" fill="url(#gold)"/>
-      <ellipse cx="50" cy="66" rx="16" ry="23" fill="#1b4fd8"/>
-      <ellipse cx="50" cy="66" rx="10" ry="15" fill="#12c2b0"/>
-      <ellipse cx="50" cy="66" rx="5" ry="8" fill="#0b1b4d"/>
-    </symbol>
-  </defs>
-</svg>
-<div class="fx" id="fx" aria-hidden="true"></div>
 <nav>
   <div class="wrap">
-    <a class="logo" href="#top">vrajesh<span>.</span>works</a>
-    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="navLinks">MENU</button>
-    <div class="nav-links" id="navLinks">
+    <a class="logo" href="#">vrajesh<span>.</span>dev</a>
+    <div class="nav-links">
       <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#approach">Approach</a>
       <a href="#about">About</a>
-      <a class="btn btn-amber" href="#contact">Contact</a>
+      <a href="https://github.com/Vrajesh-works" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/vrajesh-nasit/" target="_blank" rel="noopener">LinkedIn</a>
     </div>
   </div>
 </nav>
 
-<main class="wrap" id="top">
+<div class="wrap">
   <header class="hero">
-    <div>
-      <div class="jai" lang="hi">॥ जय श्री कृष्ण ॥</div>
-      <div class="status"><span class="dot"></span>Open to software engineering roles</div>
-      <h1>Vrajesh Nasit<span class="amber">.</span></h1>
-      <div class="role"><span id="typed">Software Engineer</span><span class="caret"></span></div>
-      <p class="lede">I build <strong>AI-powered applications</strong>, <strong>fintech tools</strong> and <strong>real-time systems</strong>. I ship full-stack products end to end, from data pipelines and models to polished, demo-ready interfaces.</p>
-      <div class="cta-row">
-        <a class="btn btn-amber" href="#projects">View projects</a>
-        <a class="btn btn-ghost" href="https://www.linkedin.com/in/vrajesh-nasit/" target="_blank" rel="noopener">LinkedIn</a>
-        <a class="btn btn-ghost" href="https://github.com/Vrajesh-works" target="_blank" rel="noopener">GitHub</a>
-      </div>
-    </div>
-    <div class="hero-side">
-    <div class="hero-art" aria-hidden="true">
-      <svg class="f" style="--r:-24deg"><use href="#feather"/></svg>
-      <svg class="f" style="--r:0deg;height:200px;width:100px"><use href="#feather"/></svg>
-      <svg class="f" style="--r:24deg"><use href="#feather"/></svg>
-    </div>
-    <div class="term" aria-hidden="true">
-      <div class="term-bar"><i></i><i></i><i></i><span>vrajesh.json</span></div>
-<pre>{
-  <span class="k">"name"</span>: <span class="s">"Vrajesh Nasit"</span>,
-  <span class="k">"role"</span>: <span class="s">"Software Engineer"</span>,
-  <span class="k">"school"</span>: <span class="s">"Northeastern University"</span>,
-  <span class="k">"focus"</span>: [
-    <span class="s">"AI applications"</span>,
-    <span class="s">"Fintech and quant tools"</span>,
-    <span class="s">"Real-time systems"</span>
-  ],
-  <span class="k">"shipped"</span>: <span class="s">3</span>,
-  <span class="k">"status"</span>: <span class="s">"building"</span>
-}</pre>
-    </div>
+    <div class="kicker">// HELLO WORLD, I'M</div>
+    <h1>Vrajesh Nasit<span class="amber">.</span></h1>
+    <p class="lede">Software Engineer building <strong>AI-powered applications</strong> and <strong>real-time systems</strong>. I ship full-stack products end to end, from data pipelines to polished, demo-ready interfaces.</p>
+    <div class="cta-row">
+      <a class="btn btn-amber" href="#projects">View projects</a>
+      <a class="btn btn-ghost" href="https://www.linkedin.com/in/vrajesh-nasit/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn btn-ghost" href="https://github.com/Vrajesh-works" target="_blank" rel="noopener">GitHub</a>
     </div>
   </header>
+
   <section id="projects">
-    <div class="sec-head reveal">01 // SELECTED WORK</div>
-    <h2 class="sec-title reveal">Projects</h2>
-    <p class="sec-sub reveal">Live, working software. Every project below is deployed and clickable, not just code on a page.</p>
+    <div class="sec-head">01 // SELECTED WORK</div>
+    <div class="sec-title">Projects</div>
+    <p class="sec-sub">Live, working software. Every project below is deployed and clickable, not just code on a page.</p>
     <div class="cards">
-      <article class="card feature reveal">
-        <div class="card-top"><div class="tag"><span class="dot"></span>LIVE · AI / BIOTECH</div><span class="num">01</span></div>
+      <div class="card">
+        <div class="tag"><span class="live-dot"></span>LIVE · AI / BIOTECH</div>
         <h3>BindBench</h3>
         <p>AI binding-affinity screening platform for small biotech labs. Create a project, add protein targets and a compound library, and BindBench ranks every candidate using the Boltz-2 model, with results you can browse, filter, and export.</p>
-        <ul class="points">
-          <li><b>Problem:</b> small labs lack an easy way to run structure-based screening without ML infrastructure.</li>
-          <li><b>Solution:</b> a project-based workflow that takes targets and compounds in and returns a ranked, exportable candidate list.</li>
-          <li><b>Engineering:</b> typed full-stack app with a Postgres schema managed by Drizzle and pgvector, deployed on Vercel.</li>
-        </ul>
         <div class="stack"><span>Next.js</span><span>TypeScript</span><span>Drizzle</span><span>pgvector</span><span>Boltz-2</span><span>Vercel</span></div>
         <div class="card-links">
           <a href="https://bindbench.vercel.app" target="_blank" rel="noopener">Live demo →</a>
-          <a href="https://github.com/Vrajesh-works/BindBench" target="_blank" rel="noopener">Source code</a>
+          <a href="https://github.com/Vrajesh-works/BindBench" target="_blank" rel="noopener">Source →</a>
         </div>
-      </article>
-
-      <article class="card reveal">
-        <div class="card-top"><div class="tag"><span class="dot"></span>LIVE · FINTECH</div><span class="num">02</span></div>
+      </div>
+      <div class="card">
+        <div class="tag"><span class="live-dot"></span>LIVE · FINTECH</div>
         <h3>Equity Terminal</h3>
-        <p>Bloomberg-style stock screener scoring 24 equities on valuation, financial health, and momentum.</p>
-        <ul class="points">
-          <li>Scrolling ticker tape and market monitor</li>
-          <li>Sortable blotter with inline sparklines</li>
-          <li>Click-through security panels with <b>quant model breakdowns</b></li>
-          <li>Python pipeline pulls data via yfinance, static front end on GitHub Pages</li>
-        </ul>
+        <p>Bloomberg-style stock screener scoring 24 equities on valuation, financial health, and momentum. Scrolling ticker tape, market monitor, sortable blotter with sparklines, and click-through security detail panels with quant model breakdowns.</p>
         <div class="stack"><span>Python</span><span>yfinance</span><span>JavaScript</span><span>GitHub Pages</span></div>
         <div class="card-links">
           <a href="https://vrajesh-works.github.io/Stock-Screener/" target="_blank" rel="noopener">Live demo →</a>
-          <a href="https://github.com/Vrajesh-works/Stock-Screener" target="_blank" rel="noopener">Source code</a>
+          <a href="https://github.com/Vrajesh-works/Stock-Screener" target="_blank" rel="noopener">Source →</a>
         </div>
-      </article>
-
-      <article class="card reveal">
-        <div class="card-top"><div class="tag"><span class="dot"></span>LIVE · QUANT FINANCE</div><span class="num">03</span></div>
+      </div>
+      <div class="card">
+        <div class="tag"><span class="live-dot"></span>LIVE · QUANT FINANCE</div>
         <h3>SOR Lab</h3>
-        <p>Smart order router that splits large orders across trading venues using the Cont-Kukanov cost model.</p>
-        <ul class="points">
-          <li>Edit the venue book and tune risk parameters live</li>
-          <li>Optimizer compared against <b>TWAP, VWAP and Best-Ask</b> baselines</li>
-          <li>Kafka-based market data streaming feeds the router</li>
-          <li>Interactive Streamlit interface built on NumPy</li>
-        </ul>
+        <p>Smart order router splitting large orders across trading venues with the Cont-Kukanov cost model. Edit the venue book, tune risk parameters live, and watch the optimizer beat TWAP, VWAP, and Best-Ask baselines.</p>
         <div class="stack"><span>Python</span><span>Streamlit</span><span>Kafka</span><span>NumPy</span></div>
         <div class="card-links">
           <a href="https://quant-dev.streamlit.app/" target="_blank" rel="noopener">Live demo →</a>
-          <a href="https://github.com/Vrajesh-works/Quant-dev" target="_blank" rel="noopener">Source code</a>
+          <a href="https://github.com/Vrajesh-works/Quant-dev" target="_blank" rel="noopener">Source →</a>
         </div>
-      </article>
-    </div>
-  </section>
-
-  <section id="skills">
-    <div class="sec-head reveal">02 // TOOLKIT</div>
-    <h2 class="sec-title reveal">Skills and technologies</h2>
-    <p class="sec-sub reveal">The tools I have actually used to ship the projects above.</p>
-    <div class="skills">
-      <div class="panel reveal"><h4><i>FE</i>Front end</h4><div class="chips"><span>TypeScript</span><span>JavaScript</span><span>Next.js</span><span>HTML / CSS</span><span>Streamlit</span></div></div>
-      <div class="panel reveal"><h4><i>BE</i>Back end and data</h4><div class="chips"><span>Python</span><span>PostgreSQL</span><span>Drizzle</span><span>pgvector</span><span>Kafka</span><span>NumPy</span><span>yfinance</span></div></div>
-      <div class="panel reveal"><h4><i>AI</i>AI and quant</h4><div class="chips"><span>Boltz-2</span><span>LLM integrations</span><span>Cost modeling</span><span>Order routing</span><span>Factor scoring</span></div></div>
-      <div class="panel reveal"><h4><i>OPS</i>Deployment</h4><div class="chips"><span>Vercel</span><span>GitHub Pages</span><span>Streamlit Cloud</span><span>Git / GitHub</span></div></div>
-      <div class="panel reveal"><h4><i>RT</i>Real-time systems</h4><div class="chips"><span>Streaming pipelines</span><span>Live dashboards</span><span>Market data</span></div></div>
-      <div class="panel reveal"><h4><i>UX</i>Product sense</h4><div class="chips"><span>Demo-ready UIs</span><span>Data visualization</span><span>Documentation</span></div></div>
-    </div>
-  </section>
-
-  <section id="approach">
-    <div class="sec-head reveal">03 // HOW I WORK</div>
-    <h2 class="sec-title reveal">From idea to live demo</h2>
-    <p class="sec-sub reveal">A repeatable process that keeps projects finished, documented, and usable by someone other than me.</p>
-    <div class="steps">
-      <div class="step reveal"><h4>Frame the problem</h4><p>Pick a real user and a concrete pain point before writing code.</p></div>
-      <div class="step reveal"><h4>Build the core</h4><p>Get the data pipeline or model working end to end first, then layer features.</p></div>
-      <div class="step reveal"><h4>Polish the interface</h4><p>Make it clear and demo-ready, so the value is obvious in under a minute.</p></div>
-      <div class="step reveal"><h4>Ship and document</h4><p>Deploy to free hosting, write the README, and keep the source public.</p></div>
+      </div>
+      <div class="card">
+        <div class="tag"><span class="live-dot"></span>LIVE · FINTECH / BACKEND</div>
+        <h3>Market Data Service</h3>
+        <p>Production-grade market data microservice with a pluggable provider layer (keyless Yahoo Finance by default), PostgreSQL persistence, optional Kafka streaming pipeline, and on-demand moving averages. Live REST API with Swagger docs.</p>
+        <div class="stack"><span>FastAPI</span><span>PostgreSQL</span><span>Kafka</span><span>Render</span><span>Neon</span></div>
+        <div class="card-links">
+          <a href="https://market-data-service-e0l6.onrender.com/docs" target="_blank" rel="noopener">Live demo →</a>
+          <a href="https://github.com/Vrajesh-works/Market-Data-Service" target="_blank" rel="noopener">Source →</a>
+        </div>
+      </div>
     </div>
   </section>
 
   <section id="about">
-    <div class="sec-head reveal">04 // PROFILE</div>
-    <h2 class="sec-title reveal">About me</h2>
-    <p class="sec-sub reveal">What I work on and what I am looking for.</p>
+    <div class="sec-head">02 // PROFILE</div>
+    <div class="sec-title">About</div>
+    <p class="sec-sub">What I work on and what I'm looking for.</p>
     <div class="about-grid">
-      <div class="panel reveal">
-        <h4 style="margin-bottom:14px">Background</h4>
-        <p>I am a <strong>software engineer</strong> studying at <strong>Northeastern University</strong>, drawn to problems where data, models, and interfaces meet. My projects span biotech screening, equity analytics, and execution algorithms, and each one is deployed so you can try it yourself.</p>
-        <p>I like owning a product end to end: shaping the data layer, wiring up the model or algorithm, and then making the result easy to understand on screen.</p>
-        <p><strong>Currently:</strong> professionalizing my public portfolio. Every practical project gets cleaned up, documented, and deployed with a live demo. BindBench, Equity Terminal, and SOR Lab are done, with more on the way.</p>
-      </div>
-      <div class="panel reveal">
-        <h4 style="margin-bottom:14px">Focus areas</h4>
-        <ul class="list">
-          <li><b>AI applications</b>LLM-powered tools and model integrations</li>
-          <li><b>Real-time systems</b>Market data, streaming, live dashboards</li>
-          <li><b>Full-stack shipping</b>From database to deployed demo</li>
-          <li><b>Education</b>Northeastern University</li>
+      <div class="about-box">
+        <h4>Focus areas</h4>
+        <ul>
+          <li><b>AI applications</b> — LLM-powered tools and model integrations</li>
+          <li><b>Real-time systems</b> — market data, streaming, live dashboards</li>
+          <li><b>Full-stack shipping</b> — from database to deployed demo</li>
         </ul>
       </div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <div class="contact reveal">
-      <div class="sec-head">05 // CONTACT</div>
-      <h2 class="sec-title">Let's build something</h2>
-      <p class="sec-sub">I am looking for software engineering opportunities. If you have a role, a project, or just want to talk shop, reach out.</p>
-      <div class="cta-row">
-        <a class="btn btn-amber" href="mailto:nasit.v@northeastern.edu">Email me</a>
-        <a class="btn btn-ghost" href="https://www.linkedin.com/in/vrajesh-nasit/" target="_blank" rel="noopener">LinkedIn</a>
-        <a class="btn btn-ghost" href="https://github.com/Vrajesh-works" target="_blank" rel="noopener">GitHub</a>
+      <div class="about-box">
+        <h4>Currently</h4>
+        <p>Professionalizing my public portfolio: every practical project gets cleaned up, documented, and deployed to free hosting with a live demo. BindBench, the Equity Terminal, SOR Lab, and the Market Data Service are done. More on the way.</p>
+        <p style="margin-top:12px"><a href="https://github.com/Vrajesh-works" target="_blank" rel="noopener" style="color:var(--amber);text-decoration:none;font-weight:600">Browse all repositories →</a></p>
       </div>
     </div>
   </section>
-</main>
+</div>
 
 <footer>
   <div class="wrap">
     <div class="links">
       <a href="https://github.com/Vrajesh-works" target="_blank" rel="noopener">GitHub</a>
       <a href="https://www.linkedin.com/in/vrajesh-nasit/" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="mailto:nasit.v@northeastern.edu">Email</a>
     </div>
-    <p class="jai" lang="hi">॥ जय श्री कृष्ण ॥</p>
-    <p>© 2026 Vrajesh Nasit · Built with plain HTML, CSS and a little JavaScript, hosted free on GitHub Pages</p>
+    <p>© 2026 Vrajesh Nasit · Built with plain HTML/CSS, hosted free on GitHub Pages</p>
   </div>
 </footer>
-
-<script src="assets/js/main.js" defer></script>
 </body>
 </html>
