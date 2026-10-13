@@ -1,33 +1,37 @@
-# Vrajesh Nasit | Portfolio
+# Vrajesh Nasit — Portfolio
 
-Personal portfolio of Vrajesh Nasit, Software Engineer. Live at https://vrajesh-works.github.io/
+A personal software engineering portfolio with an ivory and indigo palette, an original morpankh hero, and restrained motion inspired by Krishna's stories.
 
-Plain HTML, CSS and JavaScript with no build step, hosted on GitHub Pages.
+Built with plain HTML, CSS, and JavaScript. No build step or runtime dependencies. GitHub Pages serves the repository root.
 
-## Structure
+## Preview
 
-```
-.
-├── index.html            Page markup
-├── 404.html              Custom not-found page
-├── robots.txt            Crawler rules
-├── sitemap.xml           Sitemap for search engines
-└── assets/
-    ├── css/style.css     All styles
-    ├── js/main.js        Typing effect, scroll reveal, nav, mobile menu
-    └── img/favicon.svg   Site icon
+```sh
+python -m http.server 8000 --bind 127.0.0.1
 ```
 
-## Run locally
+Open http://127.0.0.1:8000.
 
-Open `index.html` in a browser, or serve the folder:
+## Files
 
-```
-python -m http.server 8000
-```
+- `index.html`: semantic page content, project detail templates, and accessible contact illustration.
+- `about.html`: separate About page with background, education, toolkit, and the design story.
+- `assets/css/style.css`: design tokens, responsive layouts, animation, and accessibility preferences.
+- `assets/js/main.js`: pointer-responsive feather, scroll reveals, mobile navigation, project dialogs, and motion controls.
+- `assets/img/`: optimized hero artwork and real screenshots from the featured projects.
+- `DESIGN.md`: design choices, artwork provenance, and verification notes.
+- `404.html`: matching not-found page.
 
-Then visit http://localhost:8000.
+## Content updates
+
+Project summaries and their detail templates live in `index.html`. Update both when a project changes. Screenshot captures are snapshots, not live market or prediction feeds. The Market Data Service and AI Study Assistant link to their source repositories.
+
+The portfolio content remains readable without JavaScript. Interactive project details and the makhan pot are progressively enabled. Normal browser scrolling and native dialog focus behavior are preserved.
+
+## Motion and accessibility
+
+The footer motion button saves the visitor's preference locally. The operating system's reduced-motion setting takes priority. Pointer motion is limited to fine pointers, stops when the hero leaves view, and stops in background tabs. Keyboard users can skip navigation, open project dialogs, dismiss them with Escape, and open the matki with Enter or Space.
 
 ## Deploy
 
-Push to `main`. GitHub Pages publishes the repository root automatically.
+Push the reviewed changes to `main`; the existing GitHub Pages configuration publishes the repository root. A local preview does not publish the changes.
