@@ -1,4 +1,10 @@
 /* The same landscape continues beyond the opening, without story captions. */
+.about-portrait{grid-column:1/-1;margin:0 0 32px;overflow:hidden;border-radius:24px;background:#dce6eb}
+.about-portrait img{width:100%;height:auto;display:block}
+.experience-section{padding-bottom:80px}.experience-heading{margin-bottom:38px}.experience-heading .eyebrow{color:var(--muted);margin-bottom:15px}.experience-heading h2{font-size:clamp(2rem,3.5vw,3rem)}
+.experience-list{list-style:none}.experience-row{display:grid;grid-template-columns:1fr 70px 190px;align-items:center;gap:28px;border-top:1px solid var(--line);padding-block:30px}.experience-row:last-child{border-bottom:1px solid var(--line)}.experience-row h3{font-size:1.25rem;line-height:1.35}.experience-row div>p{font-size:.9rem;color:var(--muted);margin-top:8px}.experience-location,.experience-dates{font-size:.75rem;color:var(--muted)}.experience-dates{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+@media(max-width:760px){.about-portrait{margin-bottom:28px}.experience-row{grid-template-columns:1fr auto;gap:10px 20px}.experience-location{grid-column:2;grid-row:1}.experience-dates{grid-column:1/-1;text-align:left}.experience-section{padding-bottom:55px}}
+@media(max-width:520px){.about-portrait{border-radius:18px;max-width:400px;width:100%;justify-self:center}.experience-heading{margin-bottom:26px}.experience-row{padding-block:24px}.experience-row h3{font-size:1.08rem}.experience-row div>p{font-size:.83rem}.experience-location{font-size:.68rem}}
 @media(max-width:520px){.js .immersive-portfolio .nav-links{background:#102c50;color:#fffaf0}.immersive-portfolio .scenic-world .scenic-peacock{bottom:115px}}
 .immersive-portfolio .project-dialog{color:var(--ink)}
 .immersive-portfolio .project .detail-button,.immersive-portfolio .row-stack,.immersive-portfolio .more-work>.eyebrow,.immersive-portfolio .motion-toggle{color:#d4e3ee}
