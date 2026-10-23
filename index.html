@@ -12,30 +12,14 @@
   <meta name="theme-color" content="#f7f6f2">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
   <link rel="canonical" href="https://vrajesh-works.github.io/">
-  <link rel="preload" href="assets/img/morpankh.webp" as="image" fetchpriority="high">
+  <link rel="preload" href="assets/img/monsoon-clearing.webp" as="image" fetchpriority="high">
   <link rel="stylesheet" href="assets/css/style.css?v=20261013-hero2">
-  <link rel="stylesheet" href="assets/css/opening.css?v=20261013-still-fan">
-  <script src="assets/js/intro-boot.js"></script>
+  <link rel="stylesheet" href="assets/css/world.css?v=20261023-qa">
   <script src="assets/js/main.js" defer></script>
   <script src="assets/js/motion-scene.js?v=20261013-hero2" defer></script>
-  <script src="assets/js/opening.js" defer></script>
+  <script src="assets/js/world-scroll.js" defer></script>
 </head>
-<body>
-  <dialog class="opening" id="opening" aria-labelledby="opening-title" aria-describedby="opening-description">
-    <div class="opening-world" aria-hidden="true">
-      <img class="opening-landscape" data-src="assets/img/monsoon-clearing.webp" width="1536" height="1024" alt="">
-      <div class="opening-atmosphere"></div><div class="opening-mist"></div>
-      <div class="opening-rain rain-far"></div>
-      <div class="opening-peacock"><div class="peacock-shadow"></div><div class="peacock-fan-spread"><img class="peacock-fan" data-src="assets/img/peacock-fan.webp" width="1000" height="667" alt=""></div><img class="peacock-body" data-src="assets/img/peacock-body.webp" width="360" height="540" alt=""></div>
-      <div class="opening-rain rain-near"></div>
-      <svg class="opening-wind" viewBox="0 0 1200 700" preserveAspectRatio="none"><path d="M-150 530 C100 310 380 620 650 370 S950 180 1360 270"/><path d="M-130 550 C140 350 400 580 680 390 S1010 200 1330 310"/></svg>
-    </div>
-    <div class="opening-wash" aria-hidden="true"></div>
-    <img class="opening-feather" data-src="assets/img/morpankh.webp" width="800" height="1200" alt="" aria-hidden="true">
-    <div class="opening-top"><span class="opening-signature">vrajesh<span>.</span></span><button class="opening-skip" id="opening-skip" autofocus>Skip intro <span aria-hidden="true">↗</span></button></div>
-    <div class="opening-copy"><p class="opening-eyebrow">A LITTLE OF WHERE IT BEGINS</p><h2 id="opening-title">Before the first rain.</h2><p id="opening-description">A moment of stillness. A feather on the wind.<br>A new story begins.</p></div>
-    <div class="opening-bottom"><span id="opening-chapter" aria-live="off">01 / THE STILLNESS</span><span class="opening-progress" aria-hidden="true"><i></i></span><span>ROOTED IN SOMETHING MEANINGFUL</span></div>
-  </dialog>
+<body class="immersive-portfolio">
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <nav class="nav shell" aria-label="Main navigation">
@@ -49,27 +33,22 @@
   </header>
 
   <main id="main">
-    <section class="hero shell" id="top" aria-labelledby="hero-title">
+    <section class="hero scenic-hero motion-art" id="top" aria-labelledby="hero-title">
+      <div class="scenic-world" aria-hidden="true"><img class="scenic-background" src="assets/img/monsoon-clearing.webp" width="1536" height="1024" alt="" fetchpriority="high"><div class="scenic-shade"></div><div class="world-mist"></div><div class="scenic-peacock"><img class="landscape-fan" src="assets/img/peacock-fan.webp" width="1000" height="667" alt=""><img class="landscape-body" src="assets/img/peacock-body.webp" width="360" height="540" alt=""></div><div class="scenic-rain"></div></div>
       <div class="hero-copy">
         <p class="eyebrow hero-enter">SOFTWARE ENGINEER &amp; CURIOUS BUILDER</p>
-        <h1 id="hero-title" class="hero-enter">Vrajesh<br>Nasit<span class="gold-dot">.</span></h1>
-        <p class="hero-line hero-enter">Thoughtful code.<br><span>Useful things.</span></p>
+        <h1 id="hero-title" class="hero-enter">Vrajesh<br> Nasit<span class="gold-dot">.</span></h1>
+        <p class="hero-line hero-enter">Thoughtful code.<br> <span>Useful things.</span></p>
         <p class="hero-description hero-enter">I build AI applications, fintech tools, and real-time systems. From the first idea to the details you can feel.</p>
         <div class="hero-actions hero-enter">
           <a class="button button-dark" href="#projects">Explore my work <span aria-hidden="true">↘</span></a>
           <a class="text-link" href="https://github.com/Vrajesh-works" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
         </div>
-        <div class="hero-playback"><button class="intro-replay text-link" id="intro-replay" hidden>Watch the opening <span aria-hidden="true">↻</span></button><button class="scene-toggle" id="scene-toggle" aria-pressed="false" hidden><span class="scene-toggle-icon" aria-hidden="true">Ⅱ</span><span id="scene-motion-label">Pause motion</span></button></div>
+        <div class="hero-playback"><button class="scene-toggle" id="scene-toggle" aria-pressed="false" hidden><span class="scene-toggle-icon" aria-hidden="true">Ⅱ</span><span id="scene-motion-label">Pause motion</span></button></div>
       </div>
-      <figure class="hero-visual motion-art" aria-label="A peacock feather, a nod to Krishna">
-        <div class="feather-halo" aria-hidden="true"></div>
-        <div class="feather-float" id="feather-float">
-          <div class="feather-reveal"><img class="hero-feather" src="assets/img/morpankh.webp" width="800" height="1200" alt="A delicate morpankh with an indigo and teal eye and fine golden strands" fetchpriority="high" decoding="async"></div>
-        </div>
-      </figure>
       <div class="hero-foot">
         <p class="availability"><span aria-hidden="true"></span>Open to software engineering opportunities</p>
-        <a class="scroll-cue" href="#projects">A little further down <span aria-hidden="true">↓</span></a>
+        <a class="scroll-cue" href="#projects">Scroll to explore my work <span aria-hidden="true">↓</span></a>
       </div>
     </section>
 
@@ -94,6 +73,7 @@
         </a>
       </article>
 
+      <div class="portfolio-landscape motion-art reveal" aria-hidden="true"><img class="landscape-base" src="assets/img/monsoon-clearing.webp" width="1536" height="1024" alt="" loading="lazy"><div class="landscape-light"></div><div class="world-mist"></div><div class="landscape-bird"><img class="landscape-fan" src="assets/img/peacock-fan.webp" width="1000" height="667" alt="" loading="lazy"><img class="landscape-body" src="assets/img/peacock-body.webp" width="360" height="540" alt="" loading="lazy"></div><div class="water-ripples"></div></div>
       <div class="project-grid">
         <article class="project project-small reveal">
           <a class="project-visual equity-visual" href="https://vrajesh-works.github.io/Stock-Screener/" target="_blank" rel="noopener noreferrer" aria-label="Explore Equity Terminal">
@@ -117,6 +97,7 @@
 
     <section class="approach-section" id="approach" aria-labelledby="approach-title">
       <div class="shell section-space">
+        <div class="approach-feather" aria-hidden="true"><img src="assets/img/morpankh.webp" width="800" height="1200" alt="" loading="lazy"></div>
         <div class="approach-top reveal"><div><p class="eyebrow"><span class="section-number">02</span> THE APPROACH</p><h2 id="approach-title">Care in the details.<br>Clarity in the result.</h2></div><p>I like owning the whole journey.<br>The data, the logic, the interface,<br>and the moment it all comes together.</p></div>
         <div class="melody motion-art" aria-hidden="true"><svg viewBox="0 0 1100 90" preserveAspectRatio="none"><path class="melody-track" d="M0 60 C120 60 160 20 275 35 S420 85 550 50 S750 5 825 30 S1000 65 1100 20"/><path class="melody-echo echo-one" d="M0 60 C120 60 160 20 275 35 S420 85 550 50 S750 5 825 30 S1000 65 1100 20"/><path class="melody-echo echo-two" d="M0 60 C120 60 160 20 275 35 S420 85 550 50 S750 5 825 30 S1000 65 1100 20"/><path class="melody-line" pathLength="1" d="M0 60 C120 60 160 20 275 35 S420 85 550 50 S750 5 825 30 S1000 65 1100 20"/><path class="melody-light" pathLength="100" d="M0 60 C120 60 160 20 275 35 S420 85 550 50 S750 5 825 30 S1000 65 1100 20"/></svg><span class="melody-note">A THREAD FROM IDEA TO EXPERIENCE</span></div>
         <ol class="steps"><li class="reveal"><span class="step-number">01</span><h3>Find the real problem.</h3><p>Start with a person and a need. Understand what would make their work easier.</p></li><li class="reveal"><span class="step-number">02</span><h3>Build the foundation.</h3><p>Get the data, model, and core behavior working together before adding layers.</p></li><li class="reveal"><span class="step-number">03</span><h3>Make it feel simple.</h3><p>Turn complex behavior into an interface that makes the next step clear.</p></li><li class="reveal"><span class="step-number">04</span><h3>Ship. Learn. Refine.</h3><p>Deploy it, document the decisions, and keep improving the experience.</p></li></ol>
