@@ -163,6 +163,10 @@
   }, { passive: true });
   addEventListener('pagehide', event => { if (!event.persisted) { media.revert(); cancelAnimationFrame(refreshFrame); clearTimeout(resizeTimer); } });
   function alignHash() {
+    // An explicit navigation always wins over a pending resize restoration.
+    clearTimeout(resizeTimer);
+    resizeTimer = null;
+    breakpointReading = null;
     let id;
     try { id = decodeURIComponent(location.hash.slice(1)); } catch { return; }
     const target = id && document.getElementById(id);
