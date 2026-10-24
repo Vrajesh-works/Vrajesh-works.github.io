@@ -66,7 +66,7 @@
   });
 
   // Progressive enhancement: content is visible without JavaScript or observer support.
-  if ('IntersectionObserver' in window && motionEnabled) {
+  if ('IntersectionObserver' in window && motionEnabled && !(window.gsap && window.ScrollTrigger)) {
     revealObserver = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (!entry.isIntersecting) return;
@@ -126,7 +126,7 @@
   const navSections = navLinks.map(link => document.querySelector(link.getAttribute('href')));
   let scrollFrame = 0;
   function updateScroll() {
-    if (approach && melody) {
+    if (approach && melody && !(window.gsap && window.ScrollTrigger)) {
       const rect = approach.getBoundingClientRect();
       const progress = Math.max(0, Math.min(1, (window.innerHeight - rect.top) / (window.innerHeight * 0.72)));
       melody.style.setProperty('--line-progress', motionEnabled ? 1 - progress : 0);

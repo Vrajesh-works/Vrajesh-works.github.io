@@ -1,0 +1,31 @@
+/* Enhancement only: the source document stays readable without GSAP. */
+html.cinematic{scroll-behavior:auto;overflow-anchor:none}
+.cinematic body,.cinematic .pin-spacer{overflow-anchor:none}
+.cinematic .reveal,.cinematic .hero-enter{animation:none!important;transition:none!important}
+.cinematic .immersive-portfolio .scenic-world{overflow:hidden}
+.cinematic .scenic-background{will-change:transform}
+html[data-motion="on"] .scenic-world[data-running="true"] .scenic-rain{animation:scenic-rain 1.3s linear infinite}
+html[data-motion="on"] .scenic-world[data-running="true"] .world-mist{animation:world-mist 14s ease-in-out infinite alternate}
+.cinematic .immersive-portfolio .project-grid{display:block}
+.cinematic .immersive-portfolio .project-small{margin-top:100px}
+.cinematic .project-visual .browser-frame{transition:none}
+.cinematic .immersive-portfolio .project-visual:hover .browser-frame{transform:none}
+.cinematic .hero-copy{transform-origin:left center}
+.cinematic .experience-list{position:relative;padding-left:24px;border-left:1px solid var(--line)}
+.cinematic .experience-row{position:relative}
+.cinematic .experience-row::before{content:"";position:absolute;left:-30px;top:38px;width:10px;height:10px;border-radius:50%;background:var(--blue);box-shadow:0 0 0 5px var(--paper)}
+.cinematic .about-portrait{isolation:isolate}.cinematic .about-portrait img{transform-origin:50% 65%}
+.cinematic .contact-card{transform-origin:center}
+@media(min-width:1000px) and (min-height:800px){
+  .cinematic .immersive-portfolio .project{height:calc(100svh - 160px);min-height:560px;max-height:840px;backdrop-filter:none;background:#102c50f2}
+  .cinematic .immersive-portfolio .project-visual{min-height:100%;height:100%}
+  .cinematic .immersive-portfolio .project-copy{padding:clamp(26px,3.4vw,50px)}
+  .cinematic .project h3{font-size:clamp(2rem,3.2vw,3rem)}
+  .cinematic .project .project-description{font-size:.95rem}
+  .cinematic .project .project-category{font-size:.63rem}
+  .cinematic .project .tech-list{font-size:.7rem}
+  .cinematic .immersive-portfolio .project-grid>.pin-spacer{max-width:100%}
+}
+@media(max-width:999px){.cinematic .immersive-portfolio .project-small{margin-top:45px}.cinematic .project{transform:none!important}.cinematic .experience-list{padding-left:18px}.cinematic .experience-row::before{left:-24px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.scenic-background,.about-portrait img{will-change:auto!important}}
+@media print{.pin-spacer{height:auto!important;padding:0!important}.cinematic .scenic-world{display:none}.cinematic .reveal,.cinematic .hero-copy,.cinematic .project-copy,.cinematic .experience-row,.cinematic .contact-copy{opacity:1!important;transform:none!important}.cinematic .project,.cinematic .contact-card,.cinematic .project-visual{clip-path:none!important;transform:none!important;height:auto!important;min-height:0!important}}
